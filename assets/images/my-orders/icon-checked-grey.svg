@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Checkbox Copy</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16" rx="8"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL21---Track-Order" transform="translate(-16.000000, -232.000000)">
+            <g id="Pop-Up-Added-to-Shopping-Bag" transform="translate(0.000000, 56.000000)">
+                <g id="POP-UP" transform="translate(16.000000, 63.000000)">
+                    <g id="Checkbox-Copy" transform="translate(0.000000, 113.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Chekbox" fill="#6F6F6F" xlink:href="#path-1"></use>
+                        <g id="done" mask="url(#mask-2)" fill="#FFFFFF" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5">
+                            <g transform="translate(4.000000, 5.000000)" id="Shape">
+                                <polygon points="2.48888889 4.44755245 0.622222222 2.68531469 0 3.27272727 2.48888889 5.62237762 7.82222222 0.587412587 7.2 6.66133815e-16"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

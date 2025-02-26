@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="16px" viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="partner-promo-detail" transform="translate(-513.000000, -888.000000)" fill="#EB395F" fill-rule="nonzero">
+            <g id="Group-7" transform="translate(165.000000, 177.000000)">
+                <g id="Group-4" transform="translate(0.000000, 480.000000)">
+                    <g id="Group-2" transform="translate(1.000000, 133.000000)">
+                        <g id="Group-6" transform="translate(347.000000, 98.000000)">
+                            <g id="copy">
+                                <path d="M10.875,0 L1.875,0 C1.05,0 0.375,0.654545455 0.375,1.45454545 L0.375,11.6363636 L1.875,11.6363636 L1.875,1.45454545 L10.875,1.45454545 L10.875,0 L10.875,0 Z M13.125,2.90909091 L4.875,2.90909091 C4.05,2.90909091 3.375,3.56363636 3.375,4.36363636 L3.375,14.5454545 C3.375,15.3454545 4.05,16 4.875,16 L13.125,16 C13.95,16 14.625,15.3454545 14.625,14.5454545 L14.625,4.36363636 C14.625,3.56363636 13.95,2.90909091 13.125,2.90909091 L13.125,2.90909091 Z M13.125,14.5454545 L4.875,14.5454545 L4.875,4.36363636 L13.125,4.36363636 L13.125,14.5454545 L13.125,14.5454545 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

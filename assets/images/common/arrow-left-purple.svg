@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow_Simple_left</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL21---Related-Order-details" transform="translate(-520.000000, -212.000000)" fill="#A775C8">
+            <g id="Components/Title/Default" transform="translate(520.027956, 208.000000)">
+                <g id="Arrow_Simple_left" transform="translate(2.424117, 8.552381) scale(-1, 1) translate(-2.424117, -8.552381) translate(0.000000, 4.208908)">
+                    <path d="M4.24761905,8.59109161 C4.38833798,8.72221488 4.60762368,8.71834584 4.74362943,8.58234009 C4.87963518,8.44633433 4.88350422,8.22704864 4.75238095,8.0863297 L0.942857143,4.2768059 L4.75238095,0.600615419 C4.88350422,0.459896488 4.87963518,0.24061079 4.74362943,0.104605039 C4.60762368,-0.0314007123 4.38833798,-0.0352697526 4.24761905,0.0958535143 L0,4.2768059 L4.24761905,8.59109161 Z" id="Shape" transform="translate(2.424117, 4.343473) scale(-1, 1) translate(-2.424117, -4.343473) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

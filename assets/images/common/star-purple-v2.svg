@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Star 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="6.31078767 9.69032674 2.41050639 11.6866438 3.15539384 7.45837637 7.02827672e-14 4.46390073 4.36064703 3.84700482 6.31078767 0 8.26092831 3.84700482 12.6215753 4.46390073 9.46618151 7.45837637 10.2110689 11.6866438"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Star-2">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Star" fill="#BD99D6" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

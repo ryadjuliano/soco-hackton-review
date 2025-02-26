@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="41px" viewBox="0 0 40 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-boy-40</title>
+    <defs>
+        <polygon id="path-1" points="0 0 37 0 37 37.0239783 0 37.0239783"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-84.000000, -32.000000)">
+            <g id="icon-boy-40" transform="translate(84.000000, 32.000000)">
+                <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                <g id="Group-10" transform="translate(1.500000, 0.000000)">
+                    <g id="Group" transform="translate(10.000000, 0.000000)" fill="#A179C5">
+                        <polygon id="Fill-1" points="6.94527538 4 9.72338553 4 9.72338553 0 6.94527538 0"></polygon>
+                        <polygon id="Fill-2" points="14.015983 5.8571443 12.5014957 4.00684326 15.1543596 1.57142785 16.6686609 3.42153189"></polygon>
+                        <polygon id="Fill-3" points="2.65267792 5.8571443 0 3.42153189 1.5143013 1.57142785 4.16716523 4.00684326"></polygon>
+                    </g>
+                    <g id="Group-9" transform="translate(0.000000, 3.000000)">
+                        <g id="Group-6">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-5"></g>
+                            <ellipse id="Oval" fill="#FFFFFF" mask="url(#mask-2)" cx="18.5" cy="17.5151515" rx="17" ry="17.5151515"></ellipse>
+                            <path d="M18.5,2.01863456 C9.4113853,2.01863456 2.01731621,9.41753581 2.01731621,18.5120901 C2.01731621,27.6064425 9.4113853,35.0053438 18.5,35.0053438 C27.5886147,35.0053438 34.9826838,27.6064425 34.9826838,18.5120901 C34.9826838,9.41753581 27.5886147,2.01863456 18.5,2.01863456 M18.5,37.0239783 C8.29903714,37.0239783 0,28.7195176 0,18.5120901 C0,8.30446071 8.29903714,0 18.5,0 C28.7007611,0 37,8.30446071 37,18.5120901 C37,28.7195176 28.7007611,37.0239783 18.5,37.0239783" id="Fill-4" fill="#A179C5" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M18.289024,29.9250646 C15.6482794,29.9250646 13.5,27.7156691 13.5,25 L15.4627952,25 C15.4627952,26.602594 16.7305646,27.90643 18.289024,27.90643 C19.8472872,27.90643 21.1150566,26.602594 21.1150566,25 L23.0778518,25 C23.0778518,27.7156691 20.9295725,29.9250646 18.289024,29.9250646" id="Fill-7" fill="#A179C5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

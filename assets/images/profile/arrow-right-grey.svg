@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow_carrot-left</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components/nav/list-cat" transform="translate(-229.000000, -19.000000)" fill="#E5E5E5" fill-rule="nonzero">
+            <g id="arrow_carrot-left" transform="translate(232.500000, 25.000000) scale(-1, 1) translate(-232.500000, -25.000000) translate(229.000000, 19.000000)">
+                <path d="M0.225,6.5325 L5.0895,11.397 C5.382,11.6895 5.8575,11.6895 6.15,11.397 C6.4425,11.1045 6.4425,10.629 6.15,10.3365 L1.8135,6 L6.15,1.6635 C6.4425,1.371 6.4425,0.8955 6.15,0.603 C5.8575,0.3105 5.382,0.3105 5.0895,0.603 L0.225,5.4675 C0.078,5.6145 0.006,5.8065 0.006,6 C0.006,6.1935 0.078,6.3855 0.225,6.5325 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

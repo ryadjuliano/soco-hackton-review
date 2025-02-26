@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow_carrot-down</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL21---Help-Center---after-login-" transform="translate(-321.000000, -739.000000)" fill="#A775C8" fill-rule="nonzero">
+            <g id="Group-9" transform="translate(16.000000, 720.000000)">
+                <g id="Group-3" transform="translate(15.501684, 13.000000)">
+                    <g id="arrow_carrot-down" transform="translate(293.484848, 12.520202) rotate(-90.000000) translate(-293.484848, -12.520202) translate(287.484848, 9.020202)">
+                        <path d="M10.371303,0.6 L6.02020202,4.9365 L1.66910101,0.6 C1.37561616,0.3075 0.898515152,0.3075 0.605030303,0.6 C0.311545455,0.8925 0.311545455,1.368 0.605030303,1.6605 L5.48590909,6.525 C5.63340404,6.672 5.82755556,6.7455 6.02020202,6.7440225 C6.21435354,6.7440225 6.407,6.672 6.55449495,6.525 L11.4353737,1.6605 C11.7288586,1.368 11.7288586,0.8925 11.4353737,0.6 C11.1418889,0.3075 10.6647879,0.3075 10.371303,0.6 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

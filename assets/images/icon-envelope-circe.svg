@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>email</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="email">
+            <path d="M0,28.5 C0,44.2401154 12.7598846,57 28.5,57 C44.2401154,57 57,44.2401154 57,28.5 C57,12.7598846 44.2401154,0 28.5,0 C12.7598846,0 0,12.7598846 0,28.5 Z" id="Path" fill="#8B7FBF" fill-rule="nonzero"></path>
+            <g id="Mail" transform="translate(14.250000, 17.812500)" stroke="#FFFFFF" stroke-width="1.78125">
+                <rect id="Rectangle" x="0" y="0" width="28.5" height="21.5353125" rx="1.318125"></rect>
+                <path d="M28.00125,0.73921875 L18.2845313,11.1684375 C17.230839,12.2720814 15.7714227,12.8964788 14.2455469,12.8964788 C12.719671,12.8964788 11.2602548,12.2720814 10.2065625,11.1684375 L0.49875,0.748125" id="Path" stroke-linejoin="round"></path>
+                <line x1="19.7629687" y1="9.57421875" x2="27.7429687" y2="20.9385938" id="Path" stroke-linejoin="round"></line>
+                <line x1="8.8884375" y1="9.69" x2="0.6234375" y2="20.9385937" id="Path" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

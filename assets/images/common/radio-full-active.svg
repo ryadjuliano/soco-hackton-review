@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Radio Button Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="8" cy="8" r="8"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components-/-Form-/-Radio-Button-/-Default">
+            <g id="Radio-Button">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <circle stroke="#F384A7" stroke-width="1.14285714" cx="8" cy="8" r="7.42857143"></circle>
+                <g id="Radio-Button-Color" mask="url(#mask-2)" fill="#A774C8">
+                    <polygon id="#F384A7" points="0 0 16 0 16 16 0 16"></polygon>
+                </g>
+                <circle id="Radio-Active" fill="#FFFFFF" mask="url(#mask-2)" cx="8" cy="8" r="3.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

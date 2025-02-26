@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ios-close</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL21---Home-Copy-14" transform="translate(-313.000000, -449.000000)" fill-rule="nonzero">
+            <g id="ios-close" transform="translate(314.000000, 450.000000)">
+                <path d="M25.6062606,4.39182692 C19.7515471,-1.46394231 10.2556632,-1.46394231 4.3937394,4.39182692 C-1.46818437,10.2475962 -1.46097413,19.7451923 4.3937394,25.6081731 C10.2484529,31.4639423 19.7443368,31.4639423 25.6062606,25.6081731 C31.4681844,19.7524038 31.4609741,10.2475962 25.6062606,4.39182692 Z" id="Path" stroke="#FFFFFF" stroke-width="2" fill="#FFBE91"></path>
+                <polygon id="Path" fill="#FFFFFF" points="21.9218288 21.0721154 21.0710207 21.9230769 14.9855795 15.8509615 8.92897932 21.8942308 8.07817119 21.0432692 14.1347714 15 8.07817119 8.95673077 8.92897932 8.10576923 14.9855795 14.1490385 21.0710207 8.07692308 21.9218288 8.92788462 15.8363876 15"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

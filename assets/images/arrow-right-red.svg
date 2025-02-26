@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="11px" viewBox="0 0 6 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL22---Entry-Point---My-Profile" transform="translate(-322.000000, -417.000000)" fill="#F05868" fill-rule="nonzero">
+            <g id="Group-6" transform="translate(16.000000, 67.000000)">
+                <g id="Group-15" transform="translate(0.000000, 335.000000)">
+                    <path d="M313.246645,17.706847 L309,21.7957005 L304.753355,17.706847 C304.466916,17.431051 304.001269,17.431051 303.714829,17.706847 C303.42839,17.9826431 303.42839,18.4309885 303.714829,18.7067846 L308.478534,23.2934853 C308.622488,23.4320905 308.811978,23.5013931 309,23.5 C309.189491,23.5 309.377512,23.4320905 309.521466,23.2934853 L314.285171,18.7067846 C314.57161,18.4309885 314.57161,17.9826431 314.285171,17.706847 C313.998731,17.431051 313.533084,17.431051 313.246645,17.706847 Z" id="Path" transform="translate(309.000000, 20.500000) rotate(-90.000000) translate(-309.000000, -20.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

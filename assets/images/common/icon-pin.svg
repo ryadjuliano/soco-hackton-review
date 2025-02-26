@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="15px" viewBox="0 0 12 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pin_location_icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="LL21---Select-address" transform="translate(-97.000000, -617.000000)" stroke="#8B7FBF" stroke-width="0.888888889">
+            <g id="Pop-Up-Added-to-Shopping-Bag" transform="translate(0.000000, 273.000000)">
+                <g id="Group-2-Copy" transform="translate(12.000000, 223.000000)">
+                    <g id="pin_location_icon" transform="translate(86.000000, 122.000000)">
+                        <path d="M9.77777778,4.88888889 C9.77777778,2.18883011 7.58894767,-1.77635684e-15 4.88888889,-1.77635684e-15 C2.18883011,-1.77635684e-15 0,2.18883011 0,4.88888889 C0,8.88888889 4.44444444,13.3333333 4.44444444,13.3333333 C4.44444444,13.3333333 9.77777778,9.33333333 9.77777778,4.88888889 Z" id="Path"></path>
+                        <circle id="Oval" cx="4.88888889" cy="4.44444444" r="1.77777778"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

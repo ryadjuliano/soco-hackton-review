@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="8px" viewBox="0 0 5 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>ArrowDown</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.97837782,1.67678966 C5.21081076,1.43500951 5.59121598,1.43500951 5.82364893,1.67678966 C6.05272308,1.91507594 6.05272308,2.29985575 5.82364893,2.53814203 L2.67409233,5.81435684 C2.56094365,5.93205576 2.40923876,5.99545455 2.25090263,5.99545455 C2.0927272,5.99672116 1.9394794,5.93249582 1.82590767,5.81435684 L-1.32364893,2.53814203 C-1.55272308,2.29985575 -1.55272308,1.91507594 -1.32364893,1.67678966 C-1.09121598,1.43500951 -0.710810759,1.43500951 -0.478377816,1.67678966 L2.25,4.51488815 L4.97837782,1.67678966 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sales-Order---sales-order-list-more-info" transform="translate(-1202.000000, -187.000000)">
+            <g id="paging-copy-2" transform="translate(1053.000000, 176.000000)">
+                <g id="Group-12">
+                    <g id="Group-8" transform="translate(137.000000, 0.000000)">
+                        <g id="ArrowDown" transform="translate(12.000000, 11.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill="#FFFFFF" fill-rule="nonzero" transform="translate(2.250000, 3.745455) rotate(-270.000000) translate(-2.250000, -3.745455) " xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

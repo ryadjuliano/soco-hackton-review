@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="197px" height="40px" viewBox="0 0 197 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <defs>
+        <polygon id="path-1" points="0 0 186 0 186 23 0 23"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL21---Category" transform="translate(-81.000000, -522.000000)">
+            <g id="Group-9" transform="translate(83.000000, 524.000000)">
+                <g id="Group-3" transform="translate(9.000000, 4.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M174.268151,23 L0,23 L0,0 L186,0 L186,11.4996475 C186,17.8512093 180.747567,23 174.268151,23" id="Fill-1" fill="#E9D9FF" mask="url(#mask-2)"></path>
+                </g>
+                <g id="Group-8">
+                    <path d="M0.52254386,0.471183673 L0.52254386,26.8108177 L0.52254386,30.2311511 L0.52254386,35.4711837 L6.33795556,30.2311511 L37.1232733,30.2311511 C39.0004181,30.2311511 40.5225439,28.6845529 40.5225439,26.7772278 L40.5225439,0.471183673 L0.52254386,0.471183673 Z" id="Fill-4" fill="#FFEBDE"></path>
+                    <path d="M0.52254386,0.471183673 L0.52254386,26.8108177 L0.52254386,30.2311511 L0.52254386,35.4711837 L6.33795556,30.2311511 L37.1232733,30.2311511 C39.0004181,30.2311511 40.5225439,28.6845529 40.5225439,26.7772278 L40.5225439,0.471183673 L0.52254386,0.471183673 Z" id="Stroke-6" stroke="#A179C5" stroke-width="3.295" stroke-linejoin="round"></path>
+                </g>
+                <text id="?" font-family="Helvetica" font-size="24" font-weight="normal" fill="#A179C5">
+                    <tspan x="14" y="23">?</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="328px" height="63px" viewBox="0 0 328 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="24.1793946%" y1="48.5013745%" x2="81.3632131%" y2="51.1979989%" id="linearGradient-1">
+            <stop stop-color="#D1D1D1" offset="0%"></stop>
+            <stop stop-color="#F7F6F7" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="328" height="63" rx="8"></rect>
+        <linearGradient x1="55.5129778%" y1="107.404786%" x2="-12.5526076%" y2="33.5760265%" id="linearGradient-4">
+            <stop stop-color="#D0CECE" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="55.5129778%" y1="107.404786%" x2="-12.5526076%" y2="33.5760265%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#DBDBDB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL21---Saved-max-3-cards" transform="translate(-16.000000, -489.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="360" height="826"></rect>
+            <g id="Group-8" transform="translate(16.000000, 325.000000)">
+                <g id="Group-7" transform="translate(0.000000, 85.000000)">
+                    <g id="Group-3-Copy" transform="translate(0.000000, 79.000000)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Rectangle" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                        <g id="Group-6" mask="url(#mask-3)" stroke-width="10.2348993">
+                            <g transform="translate(13.000000, 7.000000)">
+                                <circle id="Oval-9" stroke="url(#linearGradient-4)" cx="60.795302" cy="62.0234899" r="16.9899329"></circle>
+                                <circle id="Oval-9-Copy" stroke="url(#linearGradient-5)" cx="61" cy="61" r="38.8926174"></circle>
+                                <circle id="Oval-9-Copy-4" stroke="url(#linearGradient-4)" opacity="0.427269345" cx="61" cy="61" r="61"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

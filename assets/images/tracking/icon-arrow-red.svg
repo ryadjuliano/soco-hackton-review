@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="18px" viewBox="0 0 10 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow_carrot-down</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LL21---Expecting---1st-2nd-trimester" transform="translate(-318.000000, -543.000000)" fill="#EF6354" fill-rule="nonzero">
+            <g id="Group-12-Copy" transform="translate(16.000000, 516.000000)">
+                <g id="arrow_carrot-down" transform="translate(307.000000, 36.000000) scale(-1, -1) rotate(90.000000) translate(-307.000000, -36.000000) translate(298.500000, 31.000000)">
+                    <path d="M14.7664286,0.857142857 L8.57142857,7.05214286 L2.37642857,0.857142857 C1.95857143,0.439285714 1.27928571,0.439285714 0.861428571,0.857142857 C0.443571429,1.275 0.443571429,1.95428571 0.861428571,2.37214286 L7.81071429,9.32142857 C8.02071429,9.53142857 8.29714286,9.63642857 8.57142857,9.63431786 C8.84785714,9.63431786 9.12214286,9.53142857 9.33214286,9.32142857 L16.2814286,2.37214286 C16.6992857,1.95428571 16.6992857,1.275 16.2814286,0.857142857 C15.8635714,0.439285714 15.1842857,0.439285714 14.7664286,0.857142857 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

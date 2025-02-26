@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon_info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_info" fill="#A774C8" fill-rule="nonzero">
+            <g id="Shape-2">
+                <path d="M6,1.13686838e-13 C2.6865,1.13686838e-13 0,2.6865 0,6 C0,9.3135 2.6865,12 6,12 C9.3135,12 12,9.3135 12,6 C12,2.6865 9.3135,1.13686838e-13 6,1.13686838e-13 Z M5.25,5.25 C5.25,4.836 5.586,4.5 6,4.5 C6.414,4.5 6.75,4.836 6.75,5.25 L6.75,9 C6.75,9.414 6.414,9.75 6,9.75 C5.586,9.75 5.25,9.414 5.25,9 L5.25,5.25 Z M6,3.762 C5.586,3.762 5.25,3.426 5.25,3.012 C5.25,2.598 5.586,2.262 6,2.262 C6.414,2.262 6.75,2.598 6.75,3.012 C6.75,3.426 6.414,3.762 6,3.762 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

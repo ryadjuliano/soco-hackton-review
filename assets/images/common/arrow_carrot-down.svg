@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="6px" viewBox="0 0 11 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>arrow_carrot-left</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_carrot-left" transform="translate(5.500000, 3.000000) scale(1, -1) rotate(90.000000) translate(-5.500000, -3.000000) translate(2.500000, -2.500000)" fill="#8B7FBF" fill-rule="nonzero">
+            <path d="M0.21,6.097 L4.7502,10.6372 C5.0232,10.9102 5.467,10.9102 5.74,10.6372 C6.013,10.3642 6.013,9.9204 5.74,9.6474 L1.6926,5.6 L5.74,1.5526 C6.013,1.2796 6.013,0.8358 5.74,0.5628 C5.467,0.2898 5.0232,0.2898 4.7502,0.5628 L0.21,5.103 C0.0728,5.2402 0.0056,5.4194 0.0056,5.6 C0.0056,5.7806 0.0728,5.9598 0.21,6.097 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
