@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react-native/no-color-literals */
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import { View, Text, StyleSheet, SafeAreaView, FlatList, ScrollView, Image } from 'react-native';
 import CardReview from '@/components/common/CardReview';
 const ActivityIndicator = React.lazy(() =>
@@ -12,10 +12,48 @@ import { isMobileWeb } from '@/components/screens';
 import responseReviews from "@/data/reviews.json"; 
 import { Tab, TabView } from 'react-native-elements-light';
 import Colors from '@/components/Colors';
-
-const AllReviewProductDetailScreen = (props) => {
+import { getAnalyze, getCompare } from '@/api/hackton';
+import { useSelector, useDispatch } from 'react-redux';
+const ProductDetailScreen = (props) => {
+  const dispatch = useDispatch();
   const statusApiReviews = 'succeeded';
+  const product = useSelector((state) => state.hackathon.productPicked)
+
   const [indexTabActived, setIndexTabActived] = useState(0);
+
+  useEffect(() => {
+    const params ={};
+    getAnalyze(product.id).then((response) => {
+
+      const data = response.data.data;
+      dispatch({
+        type: 'hackathon/setEffects',
+        data: data.effects,
+      });
+
+      dispatch({
+        type: 'hackathon/setSummary',
+        data: data.summary,
+      });
+    })
+    .catch(() => {
+
+    })
+   
+    getCompare(params).then((response) => {
+      const data = response.data.data;
+      dispatch({
+        type: 'hackathon/setCompare',
+        data: data,
+      });
+    })
+    .catch(() => {
+
+    })
+  }, [])
+ 
+
+
   const ListFooterComponent = () => (
     <View style={{ padding: 16 }}>
       {statusApiReviews === 'pending' && <ActivityIndicator />}
@@ -178,4 +216,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AllReviewProductDetailScreen;
+export default ProductDetailScreen;

@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-color-literals */
 /* eslint-disable react-native/no-inline-styles */
-import React, {Suspense, useEffect} from 'react';
+import React, {Suspense} from 'react';
 import {
   View,
   Text,
@@ -8,11 +8,13 @@ import {
   Image,
 } from 'react-native';
 import ListRatingByTypes from '@/components/common/ListRatingByTypes';
+import ActivityIndicator from '@/components/common/ActivityIndicator';
 const starSource = require('@/assets/images/star-filled.svg');
 import { useSelector } from 'react-redux';
 const $get = require('lodash.get');
 const ListHeader = (props) => {
-  const product = useSelector((state) => state.hackathon.productPicked)
+  const product = useSelector((state) => state.hackathon.productPicked);
+  const effects = useSelector((state) => state.hackathon.effects)
 
   const averageRating = $get(product, 'review_stats.average_rating', 0);
   const averageRatingByTypes = $get(
@@ -20,30 +22,48 @@ const ListHeader = (props) => {
     'review_stats.average_rating_by_types',
     {},
   );
-
-  useEffect(() => {
-    console.log(product)
-  }, [product])
-
   return (
-    <View style={styles.head}>
+    <View>
+      <View style={styles.head}>
     
-      <View style={styles.ratingAverage}>
-        
-        <View style={styles.starWrapper}>
-          <Image source={starSource} style={styles.star} />
+        <View style={styles.ratingAverage}>
+          
+          <View style={styles.starWrapper}>
+            <Image source={starSource} style={styles.star} />
+          </View>
+          <Text style={styles.ratingAverageText}>{averageRating.toFixed(1)}</Text>
         </View>
-        <Text style={styles.ratingAverageText}>{averageRating.toFixed(1)}</Text>
-      </View>
 
-      <Suspense fallback={<></>}>
-        <ListRatingByTypes averageRatingByTypes={averageRatingByTypes} isDetail={true} />
-      </Suspense>
+        <Suspense fallback={<></>}>
+          <ListRatingByTypes averageRatingByTypes={averageRatingByTypes} isDetail={true} />
+        </Suspense>
+      </View>
+      <View style={{paddingHorizontal: 10}}>
+       
+        <View style={styles.effectsContainer}>
+          <Image source={require('@/assets/images/AI_icon-removebg-preview-1.png')}  style={styles.ai} />
+          {effects.map((effect) => (
+            <Text style={styles.ratingAverageTextLight}>{effect}</Text>
+          ))}
+        </View>
+      </View>
+     
     </View>
+
   );
 };
 
 const styles = StyleSheet.create({
+  ai: {
+    width: 36,
+    height: 32,
+    marginBottom: 4,
+  },
+  effectsContainer: {
+    backgroundColor: '#FED8E5',
+    borderRadius: 15,
+    padding: 16,
+  },
   head: {
     minHeight: 60,
     position: 'relative',
@@ -66,6 +86,13 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     color: '#231f20',
     fontFamily: 'satoshi-bold',
+    letterSpacing: 0,
+  },
+  ratingAverageTextLight: {
+    fontSize: 12,
+    lineHeight: 16,
+    color: '#231f20',
+    fontFamily: 'satoshi-medium',
     letterSpacing: 0,
   },
   starWrapper: {
