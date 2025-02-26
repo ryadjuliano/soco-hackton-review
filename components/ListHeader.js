@@ -14,8 +14,8 @@ import { useSelector } from 'react-redux';
 const $get = require('lodash.get');
 const ListHeader = (props) => {
   const product = useSelector((state) => state.hackathon.productPicked);
-  const effects = useSelector((state) => state.hackathon.effects)
-
+  const effects = useSelector((state) => state.hackathon.effects);
+  const summary = useSelector((state) => state.hackathon.summary);
   const averageRating = $get(product, 'review_stats.average_rating', 0);
   const averageRatingByTypes = $get(
     product,
@@ -38,14 +38,31 @@ const ListHeader = (props) => {
           <ListRatingByTypes averageRatingByTypes={averageRatingByTypes} isDetail={true} />
         </Suspense>
       </View>
-      <View style={{paddingHorizontal: 10}}>
-       
+      <View style={{paddingHorizontal: 10, marginBottom: 20}}>
+        {Array.isArray(effects) && effects.length ?
         <View style={styles.effectsContainer}>
           <Image source={require('@/assets/images/AI_icon-removebg-preview-1.png')}  style={styles.ai} />
           {effects.map((effect) => (
             <Text style={styles.ratingAverageTextLight}>{effect}</Text>
           ))}
         </View>
+        : 
+          <ActivityIndicator />
+        }
+      
+      </View>
+
+
+      <View style={{paddingHorizontal: 10, marginBottom: 20}}>
+      <Text style={[styles.ratingAverageText, {marginBottom: 5}]}>Bestie Say:</Text>
+        {Array.isArray(effects) && effects.length ?
+        <View style={styles.effectsContainer}>
+          <Text style={styles.ratingAverageTextLight}>{summary}</Text>
+        </View>
+        : 
+          <ActivityIndicator />
+        }
+      
       </View>
      
     </View>
