@@ -28,7 +28,8 @@ export default function HomeScreen() {
           source={{uri: 'https://images.soco.id/a16a1d7d-4aca-46f3-95cd-bde03ef69ccc-.jpg'}}
           style={styles.reactLogo}
         />
-      }>
+      }
+    >
         {isLoading ?
           <ActivityIndicator activityIndicatorContainerStyle={styles.activityIndicatorContainerStyle} />
         :

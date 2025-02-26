@@ -181,372 +181,196 @@ const CardReview = (props) => {
     productTotalReview,
   };
   return (
-    <>
-      {isWeb ? (
-        <View style={[styles.cardReviewContainer, cardReviewContainer]}>
-          <View style={styles.row}>
-            <View style={[styles.col, styles.col3]}>
-              <View style={[styles.row, { justifyContent: 'space-between' }]}>
-                <View style={[styles.row, { marginBottom: 20 }]}>
-                  <Image
-                    source={sourceAvatar}
-                    style={styles.profilePhoto}
-                    defaultSource={defaultAvatarSource}
-                    resizeMode="cover"
-                  />
-                  <View style={styles.boxInfoUser}>
-                    <Text style={styles.userFullname}>{owner.name}</Text>
-                    <Text style={styles.ageRange}>
-                      {reviewDate} · {ageRange}
-                    </Text>
-                  </View>
-                </View>
-              </View>
-              <View stylel={styles.row}>
-                {showProduct && <CardReviewProduct {...productProps} />}
-              </View>
+    <View style={[styles.cardReviewContainer, cardReviewContainer]}>
+      {showProduct && <CardReviewProduct {...productProps} />}
 
-              {showListRatingType && (
-                <ListRatingByTypes
-                  averageRatingByTypes={averageRatingByTypes}
-                />
-              )}
-            </View>
+      <View style={styles.head}>
+        <TouchableOpacity
+          style={[styles.row, { alignItems: 'center' }]}
+          onPress={toggleExpandHandler}>
+          <RatingStar
+            rating={averageRating}
+            starWidth={18}
+            starHeight={17}
+            count={averageRating}
+            ratingText={{
+              fontSize: 16,
+              lineHeight: 20,
+              fontFamily: 'satoshi-black',
+              color: '#25182E',
+            }}
+          />
+          <View style={{ marginLeft: 5 }}>
+            <Image
+              source={isExpand ? iconArrowUpSource : iconArrowDownSource}
+              style={styles.iconArrowDown}
+              resizeMode="cover"
+            />
+          </View>
+        </TouchableOpacity>
 
-            <View
-              style={[
-                styles.col,
-                showRecommendation ? styles.col6 : styles.col9,
-              ]}>
-              <CardReviewRating
-                {...{ averageRating, review, productTotalReview }}
-                style={{ marginBottom: 15 }}
-                column={showProduct}
-              />
+        {review.is_verified_purchase && (
+          <View
+            style={[
+              styles.row,
+              {
+                paddingHorizontal: 4,
+                paddingVertical: 2,
+              },
+            ]}>
+            <Image
+              source={trustedReviewIcon}
+              style={styles.trustedReviewIcon}
+              resizeMode="cover"
+            />
+          </View>
+        )}
+      </View>
 
-              <View style={[styles.row, { marginBottom: 12 }]}>
-                {Boolean(productVariant) && (
-                  <ParsedText
-                    style={styles.textExpandVariant}
-                    childrenProps={{ allowFontScaling: false }}>
-                    {productVariant}
-                  </ParsedText>
-                )}
-              </View>
-
-              <View style={styles.row}>
-                <Text style={styles.textReview}>{review.details}</Text>
-              </View>
-
-              {Array.isArray(review.images) && review.images.length ? (
-                <ScrollView
-                  horizontal={true}
-                  contentContainerStyle={{ marginBottom: 12 }}
-                  showsHorizontalScrollIndicator={false}>
-                  {(review.images || []).map((photo, key) => (
-                    <TouchableOpacity
-                      onPress={() => showModalUserPhotos(photo, key)}
-                      style={{ marginRight: 8 }}
-                      key={`userPhotos${key}`}>
-                      <Image
-                        source={
-                          photo.name
-                            ? { uri: imageSource(photo.name, 152) }
-                            : defaultProductImage
-                        }
-                        style={styles.userProductPhoto}
-                        resizeMode="cover"
-                        defaultSource={defaultProductImage}
-                      />
-                    </TouchableOpacity>
-                  ))}
-                </ScrollView>
-              ) : null}
-
-              <View
-                style={[
-                  styles.footer,
-                  { flexDirection: displayHelpful ? 'row' : 'row-reverse' },
-                ]}>
-                {displayHelpful && isLoggedIn && (
-                  <TouchableOpacity
-                    style={styles.row}
-                    onPress={toggleLikeHandler}
-                    disabled={processing}>
-                    <Image
-                      source={review?.has_liked ? likeActiveSource : likeSource}
-                      style={styles.helpfull}
-                      resizeMode="cover"
-                    />
-
-                    <Text
-                      style={[
-                        styles.helpfullText,
-                        review.has_liked ? styles.helpfullTextActive : {},
-                      ]}>
-                      Helpful {totalLikes}
-                    </Text>
-                  </TouchableOpacity>
-                )}
-                {isReviewOwner ? (
-                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    {!review?.is_editable && (
-                      <Text style={styles.textEdited}>
-                        Edited at {editedDate}
-                      </Text>
-                    )}
-
-                    <TouchableOpacity
-                      onPress={showModalActionReview}
-                      style={styles.iconDropdownActionContainer}>
-                      <Image
-                        source={iconDropdownActionSource}
-                        style={styles.iconDropdownAction}
-                        resizeMode="cover"
-                      />
-                    </TouchableOpacity>
-                  </View>
-                ) : (
-                  <>
-                    {isLoggedIn && (
-                      <TouchableOpacity
-                        onPress={showModalReportReview}
-                        style={styles.iconReportContainer}>
-                        <Image
-                          source={iconReportSource}
-                          style={styles.iconReport}
-                          resizeMode="cover"
-                        />
-                      </TouchableOpacity>
-                    )}
-                  </>
-                )}
-              </View>
-            </View>
-
-            {showRecommendation && (
-              <View
-                style={[styles.col, styles.col3, isWeb && { paddingLeft: 40 }]}>
-                <View>
-                  <View style={styles.boxInfo}>
-                    <Text style={styles.boxInfoText}>Recommend</Text>
-                    <Text
-                      style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
-                      {review.is_recommended}
-                    </Text>
-                  </View>
-                  <View style={styles.boxInfo}>
-                    <Text style={styles.boxInfoText}>Repurchase</Text>
-                    <Text
-                      style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
-                      {review.is_repurchase}
-                    </Text>
-                  </View>
-                  <View style={[styles.boxInfo, styles.boxInfoLastChild]}>
-                    <Text style={styles.boxInfoText}>Usage Period</Text>
-                    <Text
-                      style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
-                      {review.duration_of_used}
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            )}
+      <View
+        style={[
+          styles.expandContainer,
+          { display: isExpand ? 'flex' : 'none' },
+        ]}>
+        <ListRatingByTypes averageRatingByTypes={averageRatingByTypes} />
+        <View style={[styles.row, { marginTop: 12, marginBottom: 16 }]}>
+          <View style={styles.boxInfo}>
+            <Text style={styles.boxInfoText}>Recommend</Text>
+            <Text style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
+              {review.is_recommended}
+            </Text>
+          </View>
+          <View style={styles.boxInfo}>
+            <Text style={styles.boxInfoText}>Repurchase</Text>
+            <Text style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
+              {review.is_repurchase}
+            </Text>
+          </View>
+          <View style={styles.boxInfo}>
+            <Text style={styles.boxInfoText}>Usage Period</Text>
+            <Text style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
+              {review.duration_of_used}
+            </Text>
           </View>
         </View>
-      ) : (
-        <View style={[styles.cardReviewContainer, cardReviewContainer]}>
-          {showProduct && <CardReviewProduct {...productProps} />}
 
-          <View style={styles.head}>
+        {Boolean(productVariant) && (
+          <ParsedText
+            style={styles.textExpandVariant}
+            parse={[
+              {
+                pattern: regexVariant,
+                style: styles.textExpandVariantBolder,
+              },
+            ]}
+            childrenProps={{ allowFontScaling: false }}>
+            {productVariant}
+          </ParsedText>
+        )}
+      </View>
+
+      <View style={styles.body}>
+        <Text style={styles.textReview}>{review.details}</Text>
+
+        <ScrollView
+          horizontal={true}
+          contentContainerStyle={{ marginBottom: 12 }}
+          showsHorizontalScrollIndicator={false}>
+          {(review.images || []).map((photo, key) => (
             <TouchableOpacity
-              style={[styles.row, { alignItems: 'center' }]}
-              onPress={toggleExpandHandler}>
-              <RatingStar
-                rating={averageRating}
-                starWidth={18}
-                starHeight={17}
-                count={averageRating}
-                ratingText={{
-                  fontSize: 16,
-                  lineHeight: 20,
-                  fontFamily: 'satoshi-black',
-                  color: '#25182E',
-                }}
+              onPress={() => showModalUserPhotos(photo, key)}
+              style={{ marginRight: 8 }}
+              key={`userPhotos${key}`}>
+              <Image
+                source={
+                  photo.name
+                    ? { uri: imageSource(photo.name, 152) }
+                    : defaultProductImage
+                }
+                style={styles.userProductPhoto}
+                resizeMode="cover"
+                defaultSource={defaultProductImage}
               />
-              <View style={{ marginLeft: 5 }}>
-                <Image
-                  source={isExpand ? iconArrowUpSource : iconArrowDownSource}
-                  style={styles.iconArrowDown}
-                  resizeMode="cover"
-                />
-              </View>
             </TouchableOpacity>
+          ))}
+        </ScrollView>
 
-            {review.is_verified_purchase && (
-              <View
-                style={[
-                  styles.row,
-                  {
-                    paddingHorizontal: 4,
-                    paddingVertical: 2,
-                  },
-                ]}>
-                <Image
-                  source={trustedReviewIcon}
-                  style={styles.trustedReviewIcon}
-                  resizeMode="cover"
-                />
-              </View>
+        <View style={[styles.row, { justifyContent: 'space-between' }]}>
+          <View style={styles.row}>
+            <Image
+              source={sourceAvatar}
+              style={styles.profilePhoto}
+              defaultSource={defaultAvatarSource}
+              resizeMode="cover"
+            />
+            <Text style={styles.userFullname}>{owner.name}</Text>
+            <Text style={styles.ageRange}> · {ageRange}</Text>
+          </View>
+          <View>
+            <Text style={styles.ageRange}>{reviewDate}</Text>
+          </View>
+        </View>
+      </View>
+
+      <View
+        style={[
+          styles.footer,
+          { flexDirection: displayHelpful ? 'row' : 'row-reverse' },
+        ]}>
+        {displayHelpful && isLoggedIn && (
+          <TouchableOpacity
+            style={styles.row}
+            onPress={toggleLikeHandler}
+            disabled={processing}>
+            <Image
+              source={review?.has_liked ? likeActiveSource : likeSource}
+              style={styles.helpfull}
+              resizeMode="cover"
+            />
+
+            <Text
+              style={[
+                styles.helpfullText,
+                review.has_liked ? styles.helpfullTextActive : {},
+              ]}>
+              Helpful {totalLikes}
+            </Text>
+          </TouchableOpacity>
+        )}
+
+        {isReviewOwner ? (
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            {!review?.is_editable && (
+              <Text style={styles.textEdited}>Edited at {editedDate}</Text>
             )}
+
+            <TouchableOpacity
+              onPress={showModalActionReview}
+              style={styles.iconDropdownActionContainer}>
+              <Image
+                source={iconDropdownActionSource}
+                style={styles.iconDropdownAction}
+                resizeMode="cover"
+              />
+            </TouchableOpacity>
           </View>
-
-          <View
-            style={[
-              styles.expandContainer,
-              { display: isExpand ? 'flex' : 'none' },
-            ]}>
-            <ListRatingByTypes averageRatingByTypes={averageRatingByTypes} />
-            <View style={[styles.row, { marginTop: 12, marginBottom: 16 }]}>
-              <View style={styles.boxInfo}>
-                <Text style={styles.boxInfoText}>Recommend</Text>
-                <Text style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
-                  {review.is_recommended}
-                </Text>
-              </View>
-              <View style={styles.boxInfo}>
-                <Text style={styles.boxInfoText}>Repurchase</Text>
-                <Text style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
-                  {review.is_repurchase}
-                </Text>
-              </View>
-              <View style={styles.boxInfo}>
-                <Text style={styles.boxInfoText}>Usage Period</Text>
-                <Text style={[styles.boxInfoText, styles.boxInfoTextBolder]}>
-                  {review.duration_of_used}
-                </Text>
-              </View>
-            </View>
-
-            {Boolean(productVariant) && (
-              <ParsedText
-                style={styles.textExpandVariant}
-                parse={[
-                  {
-                    pattern: regexVariant,
-                    style: styles.textExpandVariantBolder,
-                  },
-                ]}
-                childrenProps={{ allowFontScaling: false }}>
-                {productVariant}
-              </ParsedText>
-            )}
-          </View>
-
-          <View style={styles.body}>
-            <Text style={styles.textReview}>{review.details}</Text>
-
-            <ScrollView
-              horizontal={true}
-              contentContainerStyle={{ marginBottom: 12 }}
-              showsHorizontalScrollIndicator={false}>
-              {(review.images || []).map((photo, key) => (
-                <TouchableOpacity
-                  onPress={() => showModalUserPhotos(photo, key)}
-                  style={{ marginRight: 8 }}
-                  key={`userPhotos${key}`}>
-                  <Image
-                    source={
-                      photo.name
-                        ? { uri: imageSource(photo.name, 152) }
-                        : defaultProductImage
-                    }
-                    style={styles.userProductPhoto}
-                    resizeMode="cover"
-                    defaultSource={defaultProductImage}
-                  />
-                </TouchableOpacity>
-              ))}
-            </ScrollView>
-
-            <View style={[styles.row, { justifyContent: 'space-between' }]}>
-              <View style={styles.row}>
-                <Image
-                  source={sourceAvatar}
-                  style={styles.profilePhoto}
-                  defaultSource={defaultAvatarSource}
-                  resizeMode="cover"
-                />
-                <Text style={styles.userFullname}>{owner.name}</Text>
-                <Text style={styles.ageRange}> · {ageRange}</Text>
-              </View>
-              <View>
-                <Text style={styles.ageRange}>{reviewDate}</Text>
-              </View>
-            </View>
-          </View>
-
-          <View
-            style={[
-              styles.footer,
-              { flexDirection: displayHelpful ? 'row' : 'row-reverse' },
-            ]}>
-            {displayHelpful && isLoggedIn && (
+        ) : (
+          <>
+            {isLoggedIn && isMobileWeb && (
               <TouchableOpacity
-                style={styles.row}
-                onPress={toggleLikeHandler}
-                disabled={processing}>
+                onPress={showModalReportReview}
+                style={styles.iconReportContainer}>
                 <Image
-                  source={review?.has_liked ? likeActiveSource : likeSource}
-                  style={styles.helpfull}
+                  source={iconReportSource}
+                  style={styles.iconReport}
                   resizeMode="cover"
                 />
-
-                <Text
-                  style={[
-                    styles.helpfullText,
-                    review.has_liked ? styles.helpfullTextActive : {},
-                  ]}>
-                  Helpful {totalLikes}
-                </Text>
               </TouchableOpacity>
             )}
-
-            {isReviewOwner ? (
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                {!review?.is_editable && (
-                  <Text style={styles.textEdited}>Edited at {editedDate}</Text>
-                )}
-
-                <TouchableOpacity
-                  onPress={showModalActionReview}
-                  style={styles.iconDropdownActionContainer}>
-                  <Image
-                    source={iconDropdownActionSource}
-                    style={styles.iconDropdownAction}
-                    resizeMode="cover"
-                  />
-                </TouchableOpacity>
-              </View>
-            ) : (
-              <>
-                {isLoggedIn && isMobileWeb && (
-                  <TouchableOpacity
-                    onPress={showModalReportReview}
-                    style={styles.iconReportContainer}>
-                    <Image
-                      source={iconReportSource}
-                      style={styles.iconReport}
-                      resizeMode="cover"
-                    />
-                  </TouchableOpacity>
-                )}
-              </>
-            )}
-          </View>
-        </View>
-      )}
-    </>
+          </>
+        )}
+      </View>
+    </View>
   );
 };
 
@@ -634,8 +458,8 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   cardReviewContainer: {
-    borderBottomColor: '#F5F5F5',
-    borderBottomWidth: 1,
+    // borderBottomColor: '#F5F5F5',
+    // borderBottomWidth: 1,
     ...(isWeb
       ? {
           paddingVertical: 30,

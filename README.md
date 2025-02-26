@@ -4,17 +4,20 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Get started
 
+#mininum node 18+
+
 1. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Start the web
 
    ```bash
-    npx expo start
+    npm run web
    ```
+
 
 In the output, you'll find options to open the app in a
 

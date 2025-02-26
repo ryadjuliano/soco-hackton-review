@@ -16,7 +16,6 @@ const ReasonCard = React.lazy(() =>
 const FlashSaleText = React.lazy(() =>
   import('@/components/FlashSaleText'),
 );
-import { Link } from '@react-navigation/native';
 import { isWeb, isMobileWeb } from '@/components/screens';
 import { screenWidth } from '@/components/screens';
 import { currencyFormat, formatPrice } from '@/components/helpers';

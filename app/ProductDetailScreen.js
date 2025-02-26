@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react-native/no-color-literals */
 import React, {useState, useCallback} from 'react';
-import { View, Text, StyleSheet, SafeAreaView, FlatList, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, FlatList, ScrollView, Image } from 'react-native';
 import CardReview from '@/components/common/CardReview';
 const ActivityIndicator = React.lazy(() =>
   import('@/components/common/ActivityIndicator'),
@@ -12,7 +12,7 @@ import { isMobileWeb } from '@/components/screens';
 import responseReviews from "@/data/reviews.json"; 
 import { Tab, TabView } from 'react-native-elements-light';
 import Colors from '@/components/Colors';
-import { screenWidth } from '@/components/helpers';
+
 const AllReviewProductDetailScreen = (props) => {
   const statusApiReviews = 'succeeded';
   const [indexTabActived, setIndexTabActived] = useState(0);
@@ -109,25 +109,17 @@ const AllReviewProductDetailScreen = (props) => {
         </TabView.Item>
 
         <TabView.Item
-          style={styles.tabViewItem}
+          style={[
+            styles.tabViewItem,
+            {
+              width: 390,
+              height: 190,
+            }
+          ]}
           onMoveShouldSetResponder={onMoveShouldSetResponder}>
           {indexTabActived === 1 && (
             <ScrollView>
-                <FlatList
-              data={responseReviews.data}
-              removeClippedSubviews={true}
-              maxToRenderPerBatch={10}
-              updateCellsBatchingPeriod={500}
-              ListHeaderComponent={ListHeader}
-              ListFooterComponent={ListFooterComponent}
-              ListEmptyComponent={ListEmptyComponent}
-              initialNumToRender={10}
-              renderItem={renderItemHandler}
-              keyExtractor={keyExtractorHandler}
-              getItemLayout={getItemLayoutHandler}
-              onEndReachedThreshold={0.9}
-              noFooter={isMobileWeb}
-            />
+               <Text>Comparison</Text>
             </ScrollView>
           )}
         </TabView.Item>

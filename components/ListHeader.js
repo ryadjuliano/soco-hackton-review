@@ -28,6 +28,7 @@ const ListHeader = (props) => {
     <View style={styles.head}>
     
       <View style={styles.ratingAverage}>
+        
         <View style={styles.starWrapper}>
           <Image source={starSource} style={styles.star} />
         </View>
@@ -43,6 +44,7 @@ const ListHeader = (props) => {
 
 const styles = StyleSheet.create({
   head: {
+    minHeight: 60,
     position: 'relative',
     padding: 16,
   },
@@ -66,6 +68,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
   },
   starWrapper: {
+    alignItems: 'center',
     marginRight: 4,
     justifyContent: 'center',
   },
