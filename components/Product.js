@@ -76,6 +76,7 @@ const Product = (props) => {
     isExclusiveDealsProduct,
     hasCombinations,
     isMultipleCombinationOnSale,
+    isShowAddToBag,
   } = ProductController(props);
 
   return (
@@ -122,7 +123,7 @@ const Product = (props) => {
               isPackContent ? styles.productImageWrapperPackContent : {},
             ]}>
             {/* Add to Bag Desktop */}
-            {showAddToBag && !isEgiftProduct ? (
+            {showAddToBag && !isEgiftProduct && isShowAddToBag ? (
               <View style={styles.overlayAddToBag}>
                 <Suspense fallback={<></>}>
                   <AddToBagButton
@@ -362,7 +363,7 @@ const Product = (props) => {
 
             {/* ADD TO BAG MOBILE */}
             {!isWeb &&
-                (isProductBabyRegistry ? isFriendsView && isInStock : true) ? (
+                (isProductBabyRegistry ? isFriendsView && isInStock : true) && isShowAddToBag ? (
                 <Suspense fallback={<></>}>
                     <AddToBagButton
                     showAddToBag={showAddToBag}

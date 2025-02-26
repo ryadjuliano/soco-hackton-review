@@ -14,11 +14,14 @@ import { Tab, TabView } from 'react-native-elements-light';
 import Colors from '@/components/Colors';
 import { getAnalyze, getCompare } from '@/api/hackton';
 import { useSelector, useDispatch } from 'react-redux';
+import { Row, Col } from '@/components/layout';
+import responseProductCompare from '@/data/product-compare.json';
+import Product from '@/components/Product';
 const ProductDetailScreen = (props) => {
   const dispatch = useDispatch();
   const statusApiReviews = 'succeeded';
   const product = useSelector((state) => state.hackathon.productPicked)
-
+  const productCompare = responseProductCompare.data;
   const [indexTabActived, setIndexTabActived] = useState(0);
 
   useEffect(() => {
@@ -149,15 +152,59 @@ const ProductDetailScreen = (props) => {
         <TabView.Item
           style={[
             styles.tabViewItem,
-            {
-              width: 390,
-              height: 190,
-            }
           ]}
-          onMoveShouldSetResponder={onMoveShouldSetResponder}>
+          onMoveShouldSetResponder={onMoveShouldSetResponder}
+        >
           {indexTabActived === 1 && (
             <ScrollView>
-               <Text>Comparison</Text>
+              <View style={{marginVertical: 20, paddingHorizontal: 10, flex: 1}}>
+                <Row>
+                  {productCompare.map((product) =>
+                    <Col xs={4} cssStyle={`margin-bottom: 12px`}>
+                      <View style={{minHeight: 400}}>
+                        <Product productData={product} isShowRating={true} isShowAddToBag={false} />
+                      </View>
+                     
+                      <Row gutterWidth={0} cssStyle={`margin-bottom: 12px`}>
+                        <Col xs={12} gutterWidth={0}>
+                          <Text style={styles.modalText}>Kulit Kering</Text>
+                          <View style={styles.box}>
+                            <Text>25%</Text>
+                          </View>
+                        </Col>
+                      </Row>
+
+                      <Row gutterWidth={0} cssStyle={`margin-bottom: 12px`}>
+                        <Col xs={12} gutterWidth={0}>
+                          <Text style={styles.modalText}>Kulit Normal</Text>
+                          <View style={styles.box}>
+                            <Text style={styles.modalTextGreen}>85%</Text>
+                          </View>
+                        </Col>
+                      </Row>
+
+                      <Row gutterWidth={0} cssStyle={`margin-bottom: 12px`}>
+                        <Col xs={12} gutterWidth={0}>
+                          <Text style={styles.modalText}>Kulit Berminyak</Text>
+                          <View style={styles.box}>
+                            <Text>25%</Text>
+                          </View>
+                        </Col>
+                      </Row>
+
+                      <Row gutterWidth={0} cssStyle={`margin-bottom: 12px`}>
+                        <Col xs={12} gutterWidth={0}>
+                          <Text style={styles.modalText}>Kulit Kombinasi</Text>
+                          <View style={styles.box}>
+                            <Text>15%</Text>
+                          </View>
+                        </Col>
+                      </Row>
+                    </Col>
+                  )}
+                </Row>
+              </View>
+               
             </ScrollView>
           )}
         </TabView.Item>
@@ -167,6 +214,13 @@ const ProductDetailScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
+  box: {
+    backgroundColor: '#FFDCE8',
+    height: 32,
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   wrapper :{
     flex: 1,
   },
@@ -175,7 +229,10 @@ const styles = StyleSheet.create({
     fontSize: 13,
     lineHeight: 23,
     color: '#404040',
-    marginBottom: 15,
+    marginBottom: 4,
+  },
+  modalTextGreen: {
+    color: '#1F9A07'
   },
   cardReviewContainer: {
     backgroundColor: Colors.white,

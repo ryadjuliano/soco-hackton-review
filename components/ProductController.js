@@ -27,6 +27,7 @@ const ProductController = (props) => {
     isShowRating,
     isHomeBannerProduct,
     momsChecklist,
+    isShowAddToBag,
   } = props;
   const dispatch = useDispatch();
   const isProductBabyRegistry = $size(babyRegistry);
@@ -479,6 +480,7 @@ const ProductController = (props) => {
     toggleCheckedProduct,
     hasCombinations,
     isMultipleCombinationOnSale,
+    isShowAddToBag,
   };
 };
 
