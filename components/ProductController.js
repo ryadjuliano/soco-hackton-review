@@ -7,6 +7,7 @@ import StringUtils from '@/components/utils/string';
 import RegistryUtils from '@/components/utils/registry';
 const $size = require('lodash.size');
 const $forEach = require('lodash.foreach');
+import { useDispatch } from 'react-redux';
 const ProductController = (props) => {
   const {
     productData,
@@ -27,7 +28,7 @@ const ProductController = (props) => {
     isHomeBannerProduct,
     momsChecklist,
   } = props;
-
+  const dispatch = useDispatch();
   const isProductBabyRegistry = $size(babyRegistry);
   const UtilsRegistry = new RegistryUtils(babyRegistry);
   const UtilsProduct = new ProductUtils(productData || {});
@@ -167,6 +168,13 @@ const ProductController = (props) => {
     if (showAddToBag) {
       onShowAddToBag(false);
     }
+
+    // insert detail product
+    dispatch({
+      type: 'hackathon/setProductPicked',
+      data: productData,
+    });
+
 
     navigation.navigate('ProductDetailScreen', {
       id: productData.id,

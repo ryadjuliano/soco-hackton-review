@@ -7,7 +7,7 @@ import { generatedRatingTypeName } from '@/components/helpers';
 import { isWeb } from '@/components/screens';
 
 const ListRatingByTypes = (props) => {
-  const { averageRatingByTypes } = props;
+  const { averageRatingByTypes, isDetail } = props;
   const listRatingByTypes = (() => {
     const list = [];
     let item = {};
@@ -22,16 +22,17 @@ const ListRatingByTypes = (props) => {
 
   return (
     <>
-      {isWeb ? (
+      {isDetail ? (
         <View style={styles.row}>
           {(listRatingByTypes || []).map((rating, key) => (
             <View style={styles.ratingTypesCol} key={key}>
-              <View style={styles.ratingTypes}>
+              <View style={[styles.ratingTypes, {backgroundColor: '#FFFFFF' , alignItems: 'flex-start', paddingHorizontal: 0}]}>
                 <Text style={styles.ratingTypesText}>
+                  {rating.name}{' '}
                   <Text style={styles.ratingTypesTextBolder}>
                     {rating.value}/5
-                  </Text>{' '}
-                  {rating.name}
+                  </Text>
+                 
                 </Text>
               </View>
             </View>

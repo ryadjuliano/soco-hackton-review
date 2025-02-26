@@ -3,7 +3,6 @@ import { Image, StyleSheet } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import ProductRecomendation from '@/components/ProductRecomendation';
 import ActivityIndicator from '@/components/common/ActivityIndicator';
-
 import { getProductsRecomendation } from '@/api/hackton';
 
 export default function HomeScreen() {
@@ -21,23 +20,25 @@ export default function HomeScreen() {
   }, [])
  
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={{uri: 'https://images.soco.id/a16a1d7d-4aca-46f3-95cd-bde03ef69ccc-.jpg'}}
-          style={styles.reactLogo}
-        />
-      }
-    >
-        {isLoading ?
-          <ActivityIndicator activityIndicatorContainerStyle={styles.activityIndicatorContainerStyle} />
-        :
-          <ProductRecomendation products={products} />
-        }
-     
+    
+      <ParallaxScrollView
+          headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+          headerImage={
+            <Image
+              source={{uri: 'https://images.soco.id/a16a1d7d-4aca-46f3-95cd-bde03ef69ccc-.jpg'}}
+              style={styles.reactLogo}
+            />
+          }
+        >
+            {isLoading ?
+              <ActivityIndicator activityIndicatorContainerStyle={styles.activityIndicatorContainerStyle} />
+            :
+              <ProductRecomendation products={products} />
+            }
+        
 
-    </ParallaxScrollView>
+      </ParallaxScrollView>
+   
   );
 }
 

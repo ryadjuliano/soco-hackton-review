@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-color-literals */
 /* eslint-disable react-native/no-inline-styles */
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect} from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,10 @@ import {
 } from 'react-native';
 import ListRatingByTypes from '@/components/common/ListRatingByTypes';
 const starSource = require('@/assets/images/star-filled.svg');
-import { useRoute } from "@react-navigation/native";
+import { useSelector } from 'react-redux';
 const $get = require('lodash.get');
-import { getDetailProduct } from '@/components/helpers';
 const ListHeader = (props) => {
-  const route = useRoute();
-  const { id } = route.params || {};
-  const product = getDetailProduct(id);
+  const product = useSelector((state) => state.hackathon.productPicked)
 
   const averageRating = $get(product, 'review_stats.average_rating', 0);
   const averageRatingByTypes = $get(
@@ -23,6 +20,10 @@ const ListHeader = (props) => {
     'review_stats.average_rating_by_types',
     {},
   );
+
+  useEffect(() => {
+    console.log(product)
+  }, [product])
 
   return (
     <View style={styles.head}>
@@ -36,7 +37,7 @@ const ListHeader = (props) => {
       </View>
 
       <Suspense fallback={<></>}>
-        <ListRatingByTypes averageRatingByTypes={averageRatingByTypes} />
+        <ListRatingByTypes averageRatingByTypes={averageRatingByTypes} isDetail={true} />
       </Suspense>
     </View>
   );

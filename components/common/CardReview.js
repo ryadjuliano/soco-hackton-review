@@ -11,9 +11,6 @@ import {
   Image,
 } from 'react-native';
 import RatingStar from '@/components/RatingStar';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { reviewLike } from '~store/product-detail/thunks';
-// import { unwrapResult } from '@reduxjs/toolkit';
 import { useNavigation } from '@react-navigation/native';
 import ListRatingByTypes from '@/components/common/ListRatingByTypes';
 import { ucfirst, productParams, imageCdn, formatDate } from '@/components/helpers';

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-native/no-color-literals */
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -10,8 +10,10 @@ import {
 } from 'react-native';
 import Product from '@/components/Product';
 
+
 const ProductRecomendation = (props, ref) => {
   const { products } = props;
+
   const renderItem = ({ item, index }) => {
     return (
       <View style={styles.productContainer} key={`productProductRecomendation${index}`}>
@@ -19,6 +21,7 @@ const ProductRecomendation = (props, ref) => {
       </View>
     );
   };
+
 
   const keyExtractor = (item, index) => `extractor${index}`;
 
